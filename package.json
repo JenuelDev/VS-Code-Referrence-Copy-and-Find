@@ -24,6 +24,17 @@
       {
         "command": "vscode-super-power.copyReference",
         "title": "Super Power: Copy Reference"
+      },
+      {
+        "command": "vscode-super-power.goToReference",
+        "title": "Super Power: Go to Reference"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-super-power.goToReference",
+        "key": "ctrl+alt+r",
+        "mac": "cmd+alt+r"
       }
     ],
     "menus": {
