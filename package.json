@@ -10,6 +10,7 @@
   "categories": [
     "Other"
   ],
+  "icon": "assets/icon-256.png",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -23,7 +24,7 @@
       },
       {
         "command": "vscode-super-power.copyReference",
-        "title": "Super Power: Copy Reference"
+        "title": "Copy Referrence"
       },
       {
         "command": "vscode-super-power.goToReference",
@@ -49,19 +50,20 @@
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "eslint src",
-    "test": "vscode-test",
-    "pretest": "npm run compile"
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "node ./out/test/runTest.js",
+    "pretest": "npm run compile",
+    "icons": "node scripts/generate-icons.mjs"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^20.19.39",
     "@types/vscode": "^1.85.0",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "^20.11.0",
-    "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
-    "typescript": "^5.3.3",
-    "eslint": "^8.56.0",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0"
+    "eslint": "^9.39.4",
+    "globals": "^17.4.0",
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.58.1"
   }
 }

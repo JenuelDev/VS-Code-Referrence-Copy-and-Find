@@ -1,51 +1,50 @@
+<p align="center">
+  <img src="./assets/VS_Code_bilang_superhero-removebg-preview.png" alt="VS Code Super Power logo" width="190" />
+</p>
+
 # VS Code Super Power
 
-Super powers for VS Code — copy file references, navigate to references, and more.
+Copy file references fast, then jump back to them just as quickly.
 
 ## Features
 
-### Copy Reference (Context Menu)
+### Copy Referrence
 
-Right-click in the editor to copy a reference to your clipboard.
+Right-click in the editor and choose `Copy Referrence`.
 
-- **On a function declaration line** — copies a function reference: `path/to/file.ts::myFunction()`
-- **On any other line** — copies a line reference: `path/to/file.ts::42`
+![Copy Referrence](./assets/screenshots/Copy%20Refference.png)
 
-The smart command auto-detects whether the cursor is on a function declaration and picks the right format.
+This command is smart:
 
-### Go to Reference (`Ctrl+Alt+R` / `Cmd+Alt+R`)
+- On a function, method, or constructor declaration line, it copies a function reference like `src/extension.ts::activate()`
+- On any other line, it copies a line reference like `src/extension.ts::42`
 
-Opens a Quick Pick to navigate to a reference. You can:
+### Other Commands
 
-- **Search files by name** — type a filename to find and open it (like `Ctrl+P`)
-- **Paste a line reference** — e.g. `src/file.ts::42` to jump to line 42
-- **Paste a function reference** — e.g. `app/Models/User.php::boot()` to jump to the function declaration
+- `Super Power: Copy Line Reference` always copies `path::line`
+- `Super Power: Copy Function Reference` always copies `path::function()`
+- `Super Power: Go to Reference` opens the reference picker
 
-### Individual Commands (Command Palette)
+### Go to Reference
 
-| Command | Description |
-|---------|-------------|
-| `Super Power: Copy Reference` | Smart copy — function ref on declarations, line ref elsewhere |
-| `Super Power: Copy Line Reference` | Always copies a line reference |
-| `Super Power: Copy Function Reference` | Always copies a function reference |
-| `Super Power: Go to Reference` | Open the reference navigator |
+Press `Ctrl+Alt+R` on Windows/Linux or `Cmd+Alt+R` on Mac.
+
+You can:
+
+- Search files by name
+- Paste a line reference like `src/extension.ts::42`
+- Paste a function reference like `src/extension.ts::activate()`
 
 ## Reference Format
 
-References use the `::` separator:
+References use `::` as the separator.
 
+```text
+src/extension.ts::42
+src/extension.ts::activate()
 ```
-path/to/file.ts::42          # line reference
-path/to/file.ts::myFunction()  # function reference
-```
-
-## Keybindings
-
-| Shortcut | Command |
-|----------|---------|
-| `Ctrl+Alt+R` (`Cmd+Alt+R` on Mac) | Go to Reference |
 
 ## Requirements
 
 - VS Code 1.85.0 or later
-- A language extension that provides document symbols (for function reference features)
+- A language extension that provides document symbols for function-based references
