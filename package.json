@@ -2,7 +2,7 @@
   "name": "vscode-super-power",
   "displayName": "VS Code Super Power",
   "description": "Super powers for VS Code — copy file references, and more",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "JenuelDev",
   "engines": {
     "vscode": "^1.85.0"
