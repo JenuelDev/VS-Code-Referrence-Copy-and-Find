@@ -12,7 +12,7 @@ Copy file references fast, then jump back to them just as quickly.
 
 Right-click in the editor and choose `Copy Referrence`.
 
-![Copy Referrence](./assets/screenshots/Copy%20Refference.png)
+![Copy Referrence](./assets/screenshots/icon-400.png)
 
 This command is smart:
 
